@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marharyta Khursik — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO: image with text on the white sheet. Swap images/hero.jpg to change the picture. -->
+<div class="hero-band">
+  <header class="hero">
+    <img src="images/hero.jpg" alt="Marharyta Khursik">
+    <div class="hero-text">
+      <h1>Marharyta Khursik</h1>
+      <p class="role">Computer Science student, C++ and systems</p>
+      <p class="bio">Third-year student in Warsaw. I write C++ from scratch and enjoy operating systems, algorithm benchmarking and scheduling.</p>
+      <div class="links">
+        <a href="https://github.com/MarharytaKh">GitHub</a>
+        <a href="https://linkedin.com/in/marharyta-khursik">LinkedIn</a>
+        <a href="mailto:khursikmarharyta@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main class="wrap wide">
+<div class="cols">
+  <div class="col col-left">
+  <!-- EDUCATION -->
+  <details class="acc">
+    <summary>Education</summary>
+    <div class="panel">
+      <h3>B.Sc. Computer Science</h3>
+      <small><a href="https://uksw.edu.pl/en/" target="_blank" rel="noopener">Cardinal Stefan Wyszyński University in Warsaw</a>, 2024 to 2027 (expected), GPA 4.28/5</small>
+      <p>Operating systems (process management, CPU scheduling, synchronization), algorithm analysis and benchmarking (5/5), statistics and probability (4.5), data structures, databases and SQL, computer networks.</p>
+    </div>
+  </details>
+
+  <!-- CERTIFICATES: copy the block inside .panel for each certificate -->
+  <details class="acc">
+    <summary>Certificates</summary>
+    <div class="panel">
+      <h3>EF SET English Certificate</h3>
+      <small>EF Standard English Test</small>
+      <p>Official English proficiency certificate.</p>
+      <div class="btns"><a href="https://cert.efset.org/en/XnZ6Hs" target="_blank" rel="noopener">View certificate</a></div>
+      <h3>Digital badge</h3>
+      <small>Credly</small>
+      <p>Verified digital badge, also shown on LinkedIn.</p>
+      <div class="btns"><a href="https://www.credly.com/badges/e0c726f0-cfec-4c1e-9018-1de50b3e54e1/linked_in_profile" target="_blank" rel="noopener">View badge</a></div>
+    </div>
+  </details>
+  </div>
+  <div class="col col-right">
+  <!-- PROJECTS: each card links to its own page in /projects.
+       To use a screenshot, replace <div class="thumb gN">...</div> with
+       <div class="thumb"><img src="images/projects/NAME.jpg" alt=""></div> -->
+  <details class="acc" id="projects" open>
+    <summary>Projects</summary>
+    <div class="panel"><div class="cards">
+      <a class="card" href="projects/benchmark.html">
+        <div class="thumb g1"><img src="images/projects/benchmark.jpg" alt="" onerror="this.remove()"><span>Sorting</span></div>
+        <div class="t"><h4>Sorting & Scheduler Benchmark</h4><p>Compares sorting algorithms and the SJF scheduler with measurements and graphs.</p><div class="tags"><span>Python</span></div></div>
+      </a>
+      <a class="card" href="projects/dzia.html">
+        <div class="thumb g2"><img src="images/projects/dzia.jpg" alt="" onerror="this.remove()"><span>Dzia</span></div>
+        <div class="t"><h4>Dzia, 2D pixel game</h4><p>A pixel-style game in C++ with SFML, with no game engine.</p><div class="tags"><span>C++</span><span>SFML</span></div></div>
+      </a>
+      <a class="card" href="projects/reversi.html">
+        <div class="thumb g3"><img src="images/projects/reversi.jpg" alt="" onerror="this.remove()"><span>Reversi</span></div>
+        <div class="t"><h4>Reversi, console game</h4><p>The classic board game as a C++ console app.</p><div class="tags"><span>C++</span></div></div>
+      </a>
+      <a class="card" href="projects/gallery.html">
+        <div class="thumb g4"><img src="images/projects/gallery.jpg" alt="" onerror="this.remove()"><span>3D</span></div>
+        <div class="t"><h4>3D Model Gallery</h4><p>Full-stack web app with in-browser 3D model viewing.</p><div class="tags"><span>JavaScript</span><span>Node.js</span><span>Three.js</span><span>Docker Compose</span></div></div>
+      </a>
+      <a class="card" href="projects/cogchain.html">
+        <div class="thumb g5"><img src="images/projects/cogchain.jpg" alt="" onerror="this.remove()"><span>Cog</span></div>
+        <div class="t"><h4>Cog Chain, 3D logic puzzle</h4><p>A downloadable puzzle for Windows and Android.</p><div class="tags"><span>Godot</span><span>C#</span><span>UML</span><span>Doxygen</span></div></div>
+      </a>
+      <a class="card" href="projects/detective.html">
+        <div class="thumb g6"><img src="images/projects/detective.jpg" alt="" onerror="this.remove()"><span>Detective</span></div>
+        <div class="t"><h4>Detective game</h4><p>A web game with a new random criminal on every launch.</p><div class="tags"><span>JavaScript</span></div></div>
+      </a>
+      <a class="card" href="projects/flags.html">
+        <div class="thumb g7"><img src="images/projects/flags.jpg" alt="" onerror="this.remove()"><span>Flags</span></div>
+        <div class="t"><h4>Flags & Maps</h4><p>A project about flags and maps.</p><div class="tags"><span>TODO</span></div></div>
+      </a>
+    </div></div>
+  </details>
+
+  <!-- EXPERIENCE -->
+  <details class="acc">
+    <summary>Experience</summary>
+    <div class="panel">
+      <h3>Student Intern</h3>
+      <small>Information Systems Center, UKSW, March 15 to April 30, 2026</small>
+      <p>Implemented front-end features in HTML, CSS and JavaScript under a mentor's guidance. Worked in a Git/GitHub review cycle of commits, code reviews and revisions, and delivered tasks in phases with regular progress checks.</p>
+    </div>
+  </details>
+  </div>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* ===== Colors & fonts: change them here ===== */
+:root{
+  --dark:#21170f;      /* dark band around the hero image */
+  --paper:#ecebe7;     /* paper color for mobile hero text */
+  --bg:#f8f5ee;        /* milky page background */
+  --surface:#fffdf9;   /* (unused now) */
+  --sheet:#ecebe7;     /* color of the accordions: same as the white sheet */
+  --sheet-card:#f8f7f3;/* project cards inside accordions */
+  --sheet-line:#d3d1c9;/* borders on the sheet */
+  --ink:#221b16;       /* main text */
+  --muted:#675d54;     /* secondary text */
+  --line:#e0d9cc;      /* borders */
+  --accent:#a8512f;    /* brick accent */
+  --display:"PT Serif",Georgia,serif;
+  --body:"PT Serif",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#1c1511;--surface:#271e18;--ink:#f1e9df;--muted:#b3a698;--line:#3a2f27;--accent:#e0875f}
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* ===== Hero (image + text on the white sheet) ===== */
+.hero-band{background:var(--dark)}
+.hero{position:relative;max-width:1500px;margin:0 auto;container-type:inline-size}
+.hero>img{display:block;width:100%;height:auto}
+/* Text block position on the white sheet: change left / top / width if you swap the image */
+.hero-text{position:absolute;left:20%;top:25%;width:38%;color:#221b16}
+.hero-text h1{font:700 max(26px,4.4cqw)/1.02 var(--display);letter-spacing:-.03em;margin:0 0 1.2cqw}
+.role{font:600 max(14px,1.5cqw)/1.3 var(--body);color:#8a4527;margin:0 0 1.2cqw}
+.bio{font-size:max(14px,1.5cqw);line-height:1.5;color:#4a423b;margin:0 0 2cqw}
+.links{display:flex;gap:.6rem;flex-wrap:wrap}
+.links a{padding:.45rem 1rem;border:2px solid #221b16;border-radius:0;font-weight:600;text-decoration:none;font-size:max(14px,1.4cqw);color:#221b16}
+.links a:hover{background:#221b16;color:#ecebe7}
+
+/* ===== Milky section with accordions ===== */
+.wrap{max-width:56rem;margin:0 auto;padding:3rem 1.25rem}
+details.acc{--accent:#a8512f;background:var(--sheet);color:#221b16;border:1px solid var(--sheet-line);border-radius:0;margin-bottom:.9rem}
+details.acc>summary{list-style:none;cursor:pointer;padding:1.1rem 1.4rem;font:700 1.35rem var(--display);display:flex;justify-content:space-between;align-items:center}
+details.acc>summary::-webkit-details-marker{display:none}
+details.acc>summary::after{content:"+";font-size:1.8rem;line-height:1;color:var(--accent);transition:transform .2s}
+details.acc[open]>summary::after{transform:rotate(45deg)}
+.panel{padding:0 1.4rem 1.4rem}
+.panel h3{font:700 1.1rem var(--display);margin:0}
+.panel small{color:#675d54;display:block;margin-bottom:.5rem}
+.panel p{margin:.4rem 0 0;color:#4a423b}
+.empty{border:1.5px dashed #b9b6ac;border-radius:0;padding:1.2rem;color:#675d54}
+
+/* ===== Project cards ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem}
+.card{background:var(--sheet-card);color:#221b16;border:1px solid var(--sheet-line);border-radius:0;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:border-color .15s}
+.card:hover{border-color:var(--accent)}
+.card .t{padding:.9rem 1rem 1.1rem;flex:1;display:flex;flex-direction:column}
+.card h4{font:700 1.05rem var(--display);margin:0 0 .3rem}
+.card p{margin:0;font-size:.95rem;color:#4a423b}
+.thumb{position:relative;overflow:hidden;aspect-ratio:16/10;width:100%;display:flex;align-items:center;justify-content:center;font:700 2rem var(--display);color:rgba(255,255,255,.92)}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* Placeholder gradients (used until you add a screenshot) */
+.g1{background:linear-gradient(135deg,#a8512f,#e0a100)}
+.g2{background:linear-gradient(135deg,#4a423b,#a8512f)}
+.g3{background:linear-gradient(135deg,#2f6f62,#21170f)}
+.g4{background:linear-gradient(135deg,#7a3b2a,#c9855a)}
+.g5{background:linear-gradient(135deg,#8a6a2f,#a8512f)}
+.g7{background:linear-gradient(135deg,#2f6f62,#c9855a)}
+.g6{background:linear-gradient(135deg,#21170f,#a8512f)}
+
+/* ===== Project page ===== */
+.detail .thumb{aspect-ratio:16/7;border-radius:0;font-size:3rem}
+.detail h1{font:700 clamp(2rem,6vw,3rem)/1.05 var(--display);letter-spacing:-.03em;margin:1.5rem 0 .5rem}
+.detail h2{font:700 1.25rem var(--display);margin:1.8rem 0 .5rem}
+.detail ul{padding-left:1.2rem;margin:0}
+.detail li{margin-bottom:.4rem}
+.back{display:inline-block;margin-bottom:1.5rem;font-weight:600;text-decoration:none;color:var(--accent)}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap}
+.tags span{font-size:.85rem;padding:.15rem .7rem;border-radius:0;border:1px solid var(--line)}
+.status{color:var(--accent);font-weight:600;margin:0 0 .6rem}
+
+/* ===== Mobile: text moves under the image ===== */
+@media (max-width:900px){
+  .hero-text{position:static;width:auto;background:var(--paper);padding:1.5rem 1.25rem 1.75rem}
+  .hero-text h1{font-size:2.2rem}
+  .role,.bio,.links a{font-size:1rem}
+  .bio{margin-bottom:1.1rem}
+}
+
+/* ===== Link buttons (project pages, certificates) ===== */
+.btns{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
+.btns a{padding:.45rem 1rem;border:2px solid var(--ink);font-weight:600;text-decoration:none;color:var(--ink);font-size:.95rem}
+.btns a:hover{background:var(--ink);color:var(--bg)}
+.panel .btns a{color:#221b16;border-color:#221b16}
+.panel .btns a:hover{background:#221b16;color:#ecebe7}
+.panel .btns{margin-bottom:1.2rem}
+
+/* ===== Two columns on the main page ===== */
+.wrap.wide{max-width:76rem}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);gap:1.25rem;align-items:start}
+.col details.acc:last-child{margin-bottom:0}
+@media (max-width:900px){
+  .cols{grid-template-columns:1fr}
+  .col-right{order:-1}
+}
+
+/* ===== Tech tags on cards ===== */
+.card .tags{margin-top:auto;padding-top:.8rem;gap:.3rem}
+.card .tags span{font-size:.75rem;padding:.1rem .55rem;border:1px solid var(--sheet-line);color:#675d54}
+
+/* ===== Image slots inside project text ===== */
+.shot{position:relative;overflow:hidden;margin:1.5rem 0;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;border:1.5px dashed var(--line);color:var(--muted);font-size:.95rem}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ===== Image fixes: one size, centered, never wider than the column ===== */
+.detail{min-width:0;max-width:100%}
+.detail figure{margin:1.5rem 0;padding:0;width:100%}
+.detail .shot{aspect-ratio:16/9;width:100%;max-width:100%;margin:1.5rem auto}
+.detail .thumb{width:100%;max-width:100%;margin:0 auto}
+.detail img{display:block;max-width:100%}
+.shot img,.thumb img{width:100%;height:100%;object-fit:cover;object-position:center}
+.card{min-width:0}
+.panel small a{color:var(--accent);text-underline-offset:2px}
