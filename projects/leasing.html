@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leasing database in Oracle — Marharyta Khursik</title>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="wrap">
+  <article class="detail">
+    <a class="back" href="../index.html#projects">Back to projects</a>
+    <!-- Cover: put the picture at images/projects/leasing.jpg (if missing, a plain placeholder is shown) -->
+    <div class="thumb"><img src="../images/projects/leasing.jpg" alt="" onerror="this.remove()"><span>Leasing</span></div>
+    <h1>Leasing database in Oracle</h1>
+
+    <div class="tags"><span>Oracle</span><span>PL/SQL</span><span>SQL</span></div>
+    <h2>About</h2>
+    <p>A database for a leasing company that stores clients, leased items, contracts, installment schedules and payments. The business logic lives in the database itself, in a PL/SQL package and a trigger.</p>
+    <h2>What it includes</h2>
+    <ul>
+      <li>Annuity installment schedule from item value, down payment, interest rate and term, split into principal and interest</li>
+      <li>Payment booking: a payment closes its installment, and the last one closes the contract</li>
+      <li>Arrears control: overdue installments are flagged, and three or more move the contract to collections</li>
+      <li>Contract status history logged by a trigger</li>
+      <li>Reports with window functions: client portfolio, arrears, cumulative monthly receipts, portfolio structure, contract ranking</li>
+    </ul>
+    <h2>Code</h2>
+    <div class="btns"><a href="https://github.com/MarharytaKh/leasing-oracle" target="_blank" rel="noopener">Repository on GitHub</a></div>
+  </article>
+</main>
+</body>
+</html>
