@@ -55,19 +55,13 @@ details.acc[open]>summary::after{transform:rotate(45deg)}
 .card .t{padding:.9rem 1rem 1.1rem;flex:1;display:flex;flex-direction:column}
 .card h4{font:700 1.05rem var(--display);margin:0 0 .3rem}
 .card p{margin:0;font-size:.95rem;color:#4a423b}
-.thumb{position:relative;overflow:hidden;aspect-ratio:16/10;width:100%;display:flex;align-items:center;justify-content:center;font:700 2rem var(--display);color:rgba(255,255,255,.92)}
+.thumb{position:relative;overflow:hidden;aspect-ratio:16/10;width:100%;display:flex;align-items:center;justify-content:center;font:700 2rem var(--display);}
 .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-/* Placeholder gradients (used until you add a screenshot) */
-.g1{background:linear-gradient(135deg,#a8512f,#e0a100)}
-.g2{background:linear-gradient(135deg,#4a423b,#a8512f)}
-.g3{background:linear-gradient(135deg,#2f6f62,#21170f)}
-.g4{background:linear-gradient(135deg,#7a3b2a,#c9855a)}
-.g5{background:linear-gradient(135deg,#8a6a2f,#a8512f)}
-.g7{background:linear-gradient(135deg,#2f6f62,#c9855a)}
-.g6{background:linear-gradient(135deg,#21170f,#a8512f)}
+/* Placeholder (used until you add a screenshot): flat, no gradient */
+.thumb{background:var(--sheet);color:#8a8378;border-bottom:1px solid var(--sheet-line)}
 
 /* ===== Project page ===== */
-.detail .thumb{aspect-ratio:16/7;border-radius:0;font-size:3rem}
+.detail .thumb{aspect-ratio:16/7;border-radius:0;font-size:3rem;border:1px solid var(--sheet-line)}
 .detail h1{font:700 clamp(2rem,6vw,3rem)/1.05 var(--display);letter-spacing:-.03em;margin:1.5rem 0 .5rem}
 .detail h2{font:700 1.25rem var(--display);margin:1.8rem 0 .5rem}
 .detail ul{padding-left:1.2rem;margin:0}
