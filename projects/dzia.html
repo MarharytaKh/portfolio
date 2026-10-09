@@ -11,19 +11,24 @@
 <main class="wrap">
   <article class="detail">
     <a class="back" href="../index.html#projects">Back to projects</a>
+    <!-- Cover: put the picture at images/projects/dzia.jpg (if missing, a plain placeholder is shown) -->
     <div class="thumb"><img src="../images/projects/dzia.jpg" alt="" onerror="this.remove()"><span>Dzia</span></div>
     <h1>Dzia, 2D pixel game</h1>
 
     <div class="tags"><span>C++</span><span>SFML</span></div>
     <h2>About</h2>
-    <p>A small pixel-style game written entirely in C++ with the SFML library, without game engines or frameworks. It was a university project.</p>
+    <p>A top-down pixel action game about a hero sent to the ruins of an old castle to defeat a monster that terrorizes the nearby villages. The battle is split into three waves: jellyfish, then baby dragons, then the boss. Between waves the player picks a card that changes the rules of the fight.</p>
+    <p>I wrote it entirely in C++ with SFML, with no game engine, as a university project. Every system, from the game loop to the menus and saves, is my own code.</p>
     <figure class="shot"><img src="../images/projects/dzia-1.jpg" alt="" onerror="this.remove()"><span>Image 1</span></figure>
     <h2>What it includes</h2>
     <ul>
-      <li>Game loop written from scratch</li>
-      <li>Manual rendering and animation</li>
-      <li>Collision detection and player movement</li>
-      <li>Custom game mechanics</li>
+      <li>Three-phase fight with a boss and its own health bar at the end</li>
+      <li>Card choice between phases that trades risk for power, for example tougher enemies for more damage</li>
+      <li>Enemies that patrol their area and chase the hero once they get close</li>
+      <li>Shop run by a frog merchant, with coins earned for clearing each wave</li>
+      <li>Lava zones that hurt the hero and invisible walls for map collisions</li>
+      <li>Sprite-sheet animation for walking, attacks, enemies and the intro scroll</li>
+      <li>Main menu, pause menu, death screen and a save system that keeps the three latest saves</li>
     </ul>
     <figure class="shot"><img src="../images/projects/dzia-2.jpg" alt="" onerror="this.remove()"><span>Image 2</span></figure>
     <h2>Code</h2>
