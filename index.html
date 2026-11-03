@@ -42,13 +42,13 @@
         <div class="win__body">
           <p class="kicker mono">Hi, I'm</p>
           <h1 class="hero__name">Marharyta<br>Khursik</h1>
-          <p class="hero__role">Computer Science student who speaks both <mark>tech</mark> and <mark>human</mark>.</p>
-        <p class="hero__lead">  
-	           Final-year CS student at UKSW in Warsaw, with 8 years of art school behind me.
-
-            I build software, I make 3D characters, and I like explaining how they work to people
-            who never asked to know what a “release pipeline” is.
-	         </p>
+          <p class="hero__role">Developer &amp; 3D artist who speaks both <mark>tech</mark> and <mark>human</mark>.</p>
+        <p class="hero__lead">
+            Final-year CS student at UKSW (GPA 4.28). I write C# for Godot, C++ without engines,
+            Node.js + PostgreSQL backends packed into Docker, and Oracle PL/SQL. On top of that,
+            8 years of art school and a 3D character pipeline from sculpt to render, so I can build
+            the thing, draw the thing and explain the thing.
+          </p>
           <ul class="hero__contacts mono">
             <li><span data-px="mail"></span><a href="mailto:khursikmarharyta@gmail.com">khursikmarharyta@gmail.com</a></li>
             <li><span data-px="phone"></span><a href="tel:+48573185277">+48 573 185 277</a></li>  
@@ -68,7 +68,7 @@
             <span class="win__title">me.jpg</span>
           </div>
           <figure class="slot slot--portrait">
-            <img src="https://avatars.githubusercontent.com/u/236900823?v=4&amp;s=800" alt="Portrait of Marharyta Khursik" width="800" height="800">
+            <img src="https://avatars.githubusercontent.com/u/236900823?v=4&amp;s=800" data-fallback="images/hero.jpg" alt="Portrait of Marharyta Khursik" width="800" height="800">
             <figcaption class="slot__hint mono">GitHub avatar</figcaption>
           </figure>
           <span class="crown" data-px="crown" aria-hidden="true"></span>
@@ -92,7 +92,7 @@
           <div class="win__body">
             <span class="reason__icon" data-px="chip" aria-hidden="true"></span>
             <h3 class="h3">I understand technology</h3>
-            <p>CS student, my own shipped projects, an internship in a university IT center. You won't need to explain to me what a system, a release or a bug report is.</p>
+            <p>I've shipped a cross-platform build, designed a REST API, configured a reverse proxy and a firewall, written PL/SQL packages and gone through code review at an internship. Systems, releases, environments and bug reports are my everyday vocabulary.</p>
             <p class="proof mono">proof →</p>
             <ul class="proof__list">
               <li><a href="#p-cog">Cog Chain, released on 2 platforms</a></li>
@@ -106,7 +106,7 @@
           <div class="win__body">
             <span class="reason__icon" data-px="bubble" aria-hidden="true"></span>
             <h3 class="h3">I explain complex things simply</h3>
-            <p>Docs and a player guide for my game, content in English and Polish, and presenting a technical decision to my own team as its lead.</p>
+            <p>DocFX/Doxygen API docs and UML for Cog Chain, a player guide, a full EN/PL localisation, and leading a team: comparing tech options and presenting the chosen stack to people with different backgrounds.</p>
           <p class="proof mono">proof →</p>
           <ul class="proof__list">
               <li><a href="#projects" data-set-mode="plain">Switch projects to “plain” mode</a></li>
@@ -121,7 +121,7 @@
           <div class="win__body">
             <span class="reason__icon" data-px="brush" aria-hidden="true"></span>
             <h3 class="h3">I make content look good</h3>
-            <p>3D characters, video editing, Canva, PowerPoint and illustration. Eight years of art school is the part most technical candidates don't have.</p>
+            <p>3D characters from sculpt to final render, hand-made game assets with baked normal maps, video editing, Canva and PowerPoint. Eight years of art school is the part most technical candidates don't have.</p>
             <p class="proof mono">proof →</p>
             <ul class="proof__list">
               <li><a href="#p-cog">Video &amp; graphics for Cog Chain</a></li>
@@ -154,17 +154,17 @@
             <div class="project__media">
               <figure class="slot slot--wide">
 
-                <img src="images/projects/cogchain.jpg" alt="Cog Chain gameplay: gears connected to a motor">
+                <img src="images/projects/cogchain-1.jpg" alt="Cog Chain gameplay: gears connected to a motor">
                 <figcaption class="slot__hint mono">images/projects/cogchain.jpg</figcaption>
               </figure>
               <div class="project__thumbs">
                 <figure class="slot">
-                  <img src="images/projects/cogchain-1.jpg" alt="Cog Chain level">  
+                  <img src="images/projects/cogchain-2.jpg" alt="Cog Chain level">  
                   <figcaption class="slot__hint mono">images/projects/cogchain-1.jpg</figcaption>
                 </figure>
                 <figure class="slot">
 
-                  <img src="images/projects/cogchain-2.jpg" alt="Cog Chain mechanism">
+                  <img class="fit-contain" src="images/projects/cogchain.jpg" alt="Cog Chain mechanism">
                   <figcaption class="slot__hint mono">images/projects/cogchain-2.jpg</figcaption>
                 </figure>
               </div>
@@ -172,8 +172,8 @@
             <div class="project__text">
               <p class="meta mono"><span data-px="gear"></span>Mar – Jun 2026 · solo · Windows &amp; Android</p>
                 <h3 class="h3">Cog Chain</h3>
-              <p class="tag-row"><span class="tag">Godot</span><span class="tag">C#</span><span class="tag">Firebase</span><span class="tag">Blender</span><span class="tag">Docs</span></p>
-                <p class="desc desc--tech">3D puzzle game in Godot/C#: gear physics with tooth ratios and opposite rotation, 18 levels, local accounts with Firebase cloud sync, a global leaderboard and 9 achievements. Documented with UML and Doxygen.</p>
+              <p class="tag-row"><span class="tag">Godot 4.6</span><span class="tag">C# / .NET</span><span class="tag">Jolt Physics</span><span class="tag">Firebase REST</span><span class="tag">DocFX</span><span class="tag">Blender</span></p>
+                <p class="desc desc--tech">~3k lines of C# on Godot 4.6. Gear meshing is a BFS over a graph rooted at the motor: each node checks centre distance against summed radii and axis alignment (dot product of basis vectors), plus type compatibility from <code>GearType</code> resources; rotation direction alternates per depth. Levels, gear configs and star limits are data-driven <code>.tres</code> resources. Global singletons (Game/UI/Sound managers) run as autoloads. Accounts, cloud saves and the leaderboard talk to Firebase Auth and Realtime Database over async REST (<code>HttpClient</code> + <code>System.Text.Json</code>), with a local JSON save as fallback. EN/PL via Godot's CSV translations; docs in DocFX + UML.</p>
               <p class="desc desc--plain">A puzzle game about gears. You connect them to a motor so that a door opens or a lamp turns on. I did everything myself: the idea, the drawings, the 3D models, the video, the testing and the release. I also wrote a guide so new players know where to start.</p>
 
               <ul class="stats">
@@ -213,7 +213,7 @@
               <h3 class="h3">3D Model Gallery</h3>
               <p class="tag-row"><span class="tag">Three.js</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Nginx</span></p>
 
-              <p class="desc desc--tech">Node.js/Express REST API with PostgreSQL and a Three.js viewer: orbit camera, movable light, mesh/material/vertex/triangle stats and preview modes for base colour, normal, AO, roughness, metalness, UV check and wireframe. Runs as three Docker Compose containers behind an Nginx reverse proxy; server hardened with SSH keys, Fail2ban and iptables.</p>
+              <p class="desc desc--tech">Express 5 (ES modules) REST API: <code>POST /api/upload</code> with Multer, <code>GET</code> and <code>DELETE /api/models</code>, metadata in PostgreSQL through a <code>pg</code> connection pool. Vite frontend with a Three.js viewer (<code>GLTFLoader</code>, <code>OrbitControls</code>) that reads mesh, material, vertex and triangle counts and swaps materials for base colour, normal, AO, roughness, metalness, UV-checker and wireframe passes. Docker Compose runs db, app and Nginx on an isolated internal network with a named volume for Postgres; only Nginx is exposed. The proxy container runs SSH with key-only auth, Fail2ban (3 tries → ban) and an iptables policy of default DROP with SSH allowed from one host. Health-check scripts per service.</p>
               <p class="desc desc--plain">A website where you upload a 3D model and look at it from every side, right in the browser. You can switch views to check each texture separately, like a 3D artist does before handing a model over. Anyone can start it with one command, and the server is protected from break-in attempts.</p>
               <ul class="stats">
                 <li><b>8</b><span>preview modes</span></li>
@@ -236,8 +236,8 @@
           <div class="project__text">
               <p class="meta mono"><span data-px="glass"></span>Mar – Apr 2026 · internship, UKSW</p>
             <h3 class="h3">Detective game</h3>
-          <p class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Git</span></p>
-            <p class="desc desc--tech">Browser game in vanilla JS with a hand-written stylesheet: interrogation and dialogue systems, an evidence notebook, randomised story variants and multiple endings. Built in phases with code review from a mentor.</p>
+          <p class="tag-row"><span class="tag">ES6 classes</span><span class="tag">vanilla JS</span><span class="tag">CSS</span><span class="tag">Git review</span></p>
+            <p class="desc desc--tech">~1.8k lines of framework-free JavaScript split into single-purpose ES6 classes: <code>SceneSystem</code>, <code>DialogSystem</code>, <code>InterrogationSystem</code>, <code>EvidenceSystem</code>, <code>EndingSystem</code>, <code>MusicSystem</code>, wired through constructor injection around a shared <code>GameState</code> and a <code>GameAPI</code> facade. Story content (scenes, interrogations, variants) lives in data files, separate from logic; <code>StoryPicker</code> selects a random culprit variant per run. Hand-written CSS UI. Delivered in phases through commits, mentor code review and revisions.</p>
             <p class="desc desc--plain">A small detective story you play in the browser. Every time you start, a different person is guilty, so you have to question suspects and collect clues. I designed how every screen looks and wrote the code.</p>
             <p class="links">
             <a class="btn btn--primary" href="https://marharytakh.github.io/detective-game/" target="_blank" rel="noopener">Play in browser</a>
@@ -250,14 +250,14 @@
         <article class="win project" id="p-bench">
           <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__title">benchmark/</span></div>
           <figure class="slot slot--wide">
-            <img src="images/projects/benchmark.jpg" alt="Sorting and scheduler benchmark: charts of running time">
+            <img src="images/projects/benchmark-1.jpg" alt="Sorting and scheduler benchmark: charts of running time">
             <figcaption class="slot__hint mono">images/projects/benchmark.jpg</figcaption>
           </figure>
           <div class="project__text">
               <p class="meta mono"><span data-px="chart"></span>in progress · algorithms + operating systems</p>
             <h3 class="h3">Sorting &amp; Scheduler Benchmark</h3>
             <p class="tag-row"><span class="tag">Python</span><span class="tag">Benchmarking</span><span class="tag">Data viz</span></p>
-            <p class="desc desc--tech">Python tool that measures sorting algorithms and SJF (Shortest Job First) CPU scheduling on growing input sizes, plots the results and compares measured running time with theoretical complexity.</p>
+            <p class="desc desc--tech">Python benchmark harness joining two courses, algorithm analysis and operating systems. It times sorting algorithms (e.g. insertion O(n²) vs merge O(n log n)) and SJF CPU scheduling on growing input sizes and plots measured time against the theoretical complexity curve on log-log axes.</p>
 
             <p class="desc desc--plain">A program that checks which way of sorting data is fastest, and how a computer should decide which task to do first. It runs real tests and turns the numbers into charts that anyone can read without a maths background.</p>
           </div>
@@ -269,21 +269,21 @@
 
       <ul class="more">
         <li class="more__item">
-        <figure class="slot"><img src="images/projects/dzia.jpg" alt="Dzia pixel game"><figcaption class="slot__hint mono">dzia.jpg</figcaption></figure>
-          <div><b>Dzia</b><span class="mono">C++ · SFML</span><p>Pixel action game without an engine: three waves, a boss and card upgrades.</p><a class="more__link mono" href="https://github.com/MarharytaKh/Dzia-Game" target="_blank" rel="noopener">GitHub ↗</a></div>
+        <figure class="slot"><img src="images/projects/dzia-1.jpg" alt="Dzia pixel game"><figcaption class="slot__hint mono">dzia.jpg</figcaption></figure>
+          <div><b>Dzia</b><span class="mono">C++ · SFML</span><p>~1.5k lines of C++ on SFML, no engine: own game loop, sprite animation, collision checks, an OOP entity hierarchy (player, enemies, boss) and file-based save slots via <code>fstream</code>.</p><a class="more__link mono" href="https://github.com/MarharytaKh/Dzia-Game" target="_blank" rel="noopener">GitHub ↗</a></div>
 
           </li>
         <li class="more__item">
-          <figure class="slot"><img src="images/projects/leasing.jpg" alt="Leasing database schema"><figcaption class="slot__hint mono">leasing.jpg</figcaption></figure>
-          <div><b>Leasing</b><span class="mono">Oracle · PL/SQL</span><p>Database for a leasing company: annuity instalment schedules, payment posting, overdue tracking with automatic hand-off to collections, a status-history trigger and window-function reports.</p><a class="more__link mono" href="https://github.com/MarharytaKh/leasing-oracle" target="_blank" rel="noopener">GitHub ↗</a></div>
+          <div class="icon-tile" aria-hidden="true"><span data-px="db"></span></div>
+          <div><b>Leasing</b><span class="mono">Oracle · PL/SQL</span><p>Oracle schema with constraints and indexes, a <code>pkg_leasing</code> PL/SQL package (annuity schedule split into principal/interest, payment posting, overdue → collections), an audit trigger on contract status, and reports using <code>SUM() OVER</code>, <code>RATIO_TO_REPORT</code> and <code>RANK()</code>.</p><a class="more__link mono" href="https://github.com/MarharytaKh/leasing-oracle" target="_blank" rel="noopener">GitHub ↗</a></div>
         </li>  
         <li class="more__item">
         <figure class="slot"><img src="images/projects/flags.jpg" alt="Flags and Maps quiz"><figcaption class="slot__hint mono">flags.jpg</figcaption></figure>
-          <div><b>Flags &amp; Maps</b><span class="mono">C++ · Qt</span><p>One-minute geography quiz on flags and country shapes, with a desktop GUI.</p></div>
+          <div><b>Flags &amp; Maps</b><span class="mono">C++ · Qt</span><p>Qt desktop app in C++: timed one-minute quiz on flags and country outlines, with a score counter and two game modes.</p></div>
         </li>
         <li class="more__item">
-          <figure class="slot"><img src="images/projects/reversi.jpg" alt="Reversi console game"><figcaption class="slot__hint mono">reversi.jpg</figcaption></figure>
-          <div><b>Reversi</b><span class="mono">C++</span><p>Console board game with a computer opponent and a saved player ranking.</p><a class="more__link mono" href="https://github.com/MarharytaKh/Reversi" target="_blank" rel="noopener">GitHub ↗</a></div>
+          <div class="icon-tile icon-tile--y" aria-hidden="true"><span data-px="board"></span></div>
+          <div><b>Reversi</b><span class="mono">C++</span><p>Console C++ game built on polymorphism: abstract <code>Gracz</code> with human and <code>Robot</code> players; the bot greedily picks the move that flips the most discs. Player ranking persisted to file.</p><a class="more__link mono" href="https://github.com/MarharytaKh/Reversi" target="_blank" rel="noopener">GitHub ↗</a></div>
         </li>
       </ul>
       </section>  

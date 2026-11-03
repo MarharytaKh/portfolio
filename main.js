@@ -125,6 +125,28 @@ const ICONS = {
 #.#o#o#.#o#.
 #.#o#o#.#o#.
 ############`,
+  db: `
+..########..
+.#oooooooo#.
+#oooooooooo#
+#.########.#
+#oooooooooo#
+#.########.#
+#oooooooooo#
+#.########.#
+#oooooooooo#
+.#oooooooo#.
+..########..`,
+  board: `
+############
+#o.o.o.o.o.#
+#.o.o.o.o.o#
+#o.o.##o.o.#
+#.o.#oo#.o.#
+#o.o.##o.o.#
+#.o.o.o.o.o#
+#o.o.o.o.o.#
+############`,
   pin: `
 ..####..
 .#oooo#.
