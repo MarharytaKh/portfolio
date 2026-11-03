@@ -197,6 +197,7 @@ document.querySelectorAll(".slot img").forEach(img => {
   if (img.dataset.fallback) queue.push(img.dataset.fallback);
   const onFail = () => {
     if (queue.length) img.src = queue.shift();
+    else if (img.closest("[data-optional]")) img.closest("[data-optional]").remove()
     else img.closest(".slot").classList.add("is-empty");
   };
   img.addEventListener("error", onFail);
@@ -207,6 +208,7 @@ const projects = document.querySelector(".projects");
 const switchBtns = document.querySelectorAll(".switch__btn");
 
 function setMode(mode) {
+  if (!projects) return
   projects.dataset.mode = mode;
   switchBtns.forEach(b => b.setAttribute("aria-checked", String(b.dataset.mode === mode)));
   try{ localStorage.setItem("explainMode", mode) }catch(e){}
@@ -250,3 +252,10 @@ if (copyBtn) {
 let year=document.getElementById('year')
 
 if(year) year.textContent=new Date().getFullYear()
+
+
+document.querySelectorAll('.video[data-yt]').forEach(box => {
+  const id = (box.dataset.yt || '').trim()
+  if (!id) return
+  box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="${box.dataset.title || 'Video'}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>`
+})
