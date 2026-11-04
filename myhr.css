@@ -70,3 +70,19 @@
 @media (max-width: 600px) { .approach dl { grid-template-columns: 1fr; gap: 4px } .approach dd { margin-bottom: 12px } }
 
 .back { margin: 32px 0 0 }
+
+.case-switch { margin: 0 0 18px }
+.did__item .desc { margin: 0; font-size: 15px; color: var(--ink-2) }
+.task .desc p { margin: 0 0 12px }
+
+.deck { margin-bottom: 8px }
+.deck__track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; background: #fff; outline: none }
+.deck__track::-webkit-scrollbar { display: none }
+.deck__track:focus-visible { outline: 3px solid var(--yellow); outline-offset: -3px }
+.deck__slide { flex: 0 0 100%; margin: 0; scroll-snap-align: start }
+.deck__slide img { width: 100%; aspect-ratio: 16/9; object-fit: contain; background: #fff }
+.deck__nav { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-top: var(--b); background: var(--paper); flex-wrap: wrap }
+.deck__btn { padding: 8px 14px; font-size: 18px }
+.deck__btn:disabled { opacity: .35; cursor: default; box-shadow: none; transform: none }
+.deck__count { font-size: 14px; min-width: 44px; text-align: center }
+.deck__dl { margin-left: auto; padding: 8px 12px }

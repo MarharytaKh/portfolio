@@ -6,22 +6,22 @@
   <title>MyHR launch: internal communication campaign (concept) — Marharyta Khursik</title>
   <meta name="description" content="Concept campaign for rolling out an HR app at a fictional 600-person company: launch newsletter, 60-second video and a six-week rollout plan.">
   <meta property="og:title" content="MyHR launch: internal communication campaign (concept)">
-  <meta property="og:image" content="../images/myhr/poster.jpg">
-  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../fonts/fonts.css">
-  <link rel="stylesheet" href="../style.css">
+  <meta property="og:image" content="poster.jpg">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="myhr.css">
-  <script src="../main.js" defer></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="bar">
-    <a class="bar__logo" href="../index.html" aria-label="Back to portfolio">
+    <a class="bar__logo" href="index.html" aria-label="Back to portfolio">
       <span class="logo-mark" aria-hidden="true">MK</span>
       <span class="bar__file">marharyta.exe</span>
     </a>
     <nav class="bar__nav" aria-label="Main">
-      <a href="../index.html#projects">← all projects</a>
+      <a href="index.html#projects">← all projects</a>
       <a href="#task">task</a>
       <a href="#video">video</a>
       <a href="#graphics">graphics</a>
@@ -30,12 +30,17 @@
     <span class="bar__clock mono" aria-label="Time in Warsaw"><span id="clock">--:--</span> WAW</span>
   </header>
 
-  <main id="main">
+  <main id="main" class="mode-root" data-mode="tech">
 
     <section class="case-head">
       <p class="kicker mono">projects / myhr_launch</p>
       <h1 class="case-title">MyHR launch: internal communication campaign <span class="concept">(concept)</span></h1>
       <p class="case-sub">Nordlight is a fictional company and MyHR a fictional app. The brief, the people and the plan are made up; the work is real.</p>
+      <div class="switch case-switch" role="radiogroup" aria-label="Explanation style">
+        <span class="switch__label mono">explain it</span>
+        <button class="switch__btn" role="radio" aria-checked="true" data-mode="tech">like a pro</button>
+        <button class="switch__btn" role="radio" aria-checked="false" data-mode="plain">like a human</button>
+      </div>
       <ul class="case-meta mono">
         <li><b>role</b>everything, solo</li>
         <li><b>audience</b>~600 staff · 3 offices + factory</li>
@@ -50,11 +55,11 @@
         <div class="win__body task">
           <div class="task__text">
             <h2 class="h3">The task</h2>
-            <p>Nordlight (lighting manufacturer, ~600 people in Gdańsk, Warsaw and Oslo) is launching MyHR, a phone app for time off, payslips and personal details. Today leave goes by e-mail to a shared inbox and lands in <code>Urlop_2026_FINAL_v3.xlsx</code>; payslips arrive as PDF attachments.</p>
-            <p>The app alone changes nothing. The goal is to get people, including the factory floor with no desks, to actually install it and stop e-mailing HR within about a month.</p>
+            <div class="desc desc--tech"><p>Nordlight (architectural lighting, ~600 FTE across Gdańsk HQ + factory, Warsaw and Oslo) is replacing an e-mail + Excel leave process (<code>Urlop_2026_FINAL_v3.xlsx</code>) and PDF payslips with MyHR, a self-service mobile app for time off, payslips and personal data, with SSO on the existing Nordlight account.</p><p>Brief: drive adoption, not awareness. Reach deskless factory staff, enable team leads (the leave approvers) first, and retire the legacy leave inbox on 4 Jan without breaking anyone's holiday.</p></div>
+            <div class="desc desc--plain"><p>A company with 600 people still asks for holidays by e-mail, and HR copies everything into a spreadsheet by hand. Now there is an app for that.</p><p>But people don't switch just because an app exists. My job was to make them want to try it, show them how, and help the ones who get stuck, including factory workers who never sit at a computer.</p></div>
           </div>
           <figure class="task__before">
-            <img src="../images/myhr/frame-before.jpg" alt="Video frame: Kasia looking worried among e-mail threads titled RE: RE: FW: Holiday 14–18 Dec?" loading="lazy">
+            <img src="frame-before.jpg" alt="Video frame: Kasia looking worried among e-mail threads titled RE: RE: FW: Holiday 14–18 Dec?" loading="lazy">
             <figcaption class="mono">before: “RE: RE: FW: Holiday 14–18 Dec?”</figcaption>
           </figure>
         </div>
@@ -67,17 +72,17 @@
         <li class="did__item">
           <span class="did__n mono">01</span>
           <h3 class="h3">Launch newsletter</h3>
-          <p>All-staff e-mail for launch day: what changes, why, from when, and one link to everything else. Short sentences, real numbers, no “seamless”.</p>
+          <p class="desc desc--tech">All-staff launch e-mail built as the hub of the campaign: change, rationale, cut-over date and a single CTA to the SharePoint page. Copy follows the brand voice rules: short sentences, concrete numbers, banned buzzwords.</p><p class="desc desc--plain">The e-mail everyone gets on launch day: what changes, why, from when, and one link where all the answers live.</p>
         </li>
         <li class="did__item">
           <span class="did__n mono">02</span>
           <h3 class="h3">60-second video</h3>
-          <p>A before/after story with Kasia from Logistics, then booking leave in three taps. Works muted with large captions, because Teams autoplays without sound.</p>
+          <p class="desc desc--tech">58-sec explainer: problem → product → 3-step task flow → support CTA. Sound-off first with burned-in captions for Teams autoplay; a recurring persona (Kasia, Logistics) for relatability; 1080p, 30 fps.</p><p class="desc desc--plain">A one-minute video: first how annoying it was before, then how to book a holiday in three taps. You can watch it without sound.</p>
         </li>
         <li class="did__item">
           <span class="did__n mono">03</span>
           <h3 class="h3">Mini rollout plan</h3>
-          <p>Three slides for HR and management: a six-week timeline, one job per channel, and the numbers that tell us it worked.</p>
+          <p class="desc desc--tech">3-slide deck for HR leadership: phased timeline (teaser → enablement → launch → hypercare → legacy switch-off → review), channel-to-objective mapping and adoption KPIs with a week-3 escalation trigger.</p><p class="desc desc--plain">Three slides for the bosses: what happens week by week, which channel does what, and how we'll know it worked.</p>
         </li>
       </ol>
     </section>
@@ -86,8 +91,8 @@
       <article class="win">
         <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__title" id="video-title">myhr_intro.mp4 · 0:58</span></div>
         <div class="video" data-yt="aYOaCHN-JDI" data-title="MyHR intro video">
-          <video controls preload="none" poster="../images/myhr/poster.jpg" playsinline>
-            <source src="../images/myhr/myhr-intro.mp4" type="video/mp4">
+          <video controls preload="none" poster="poster.jpg" playsinline>
+            <source src="myhr-intro.mp4" type="video/mp4">
             Your browser can't play this video.
           </video>
         </div>
@@ -100,28 +105,37 @@
       <article class="win newsletter-win" data-optional>
         <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__title">newsletter · 1 Dec</span></div>
         <figure class="slot newsletter">
-          <img src="../images/myhr/newsletter.png" alt="MyHR launch newsletter" loading="lazy">
+          <img src="newsletter.png" alt="MyHR launch newsletter" loading="lazy">
           <figcaption class="slot__hint mono">images/myhr/newsletter.png</figcaption>
         </figure>
       </article>
 
       <h3 class="h4 gfx-label mono">app screens shown in the video</h3>
       <div class="phones">
-        <figure><img src="../images/myhr/screen-home.png" alt="MyHR home screen: Good morning, Kasia; 26 days of time off left" loading="lazy"><figcaption class="mono">home</figcaption></figure>
-        <figure><img src="../images/myhr/screen-dates.png" alt="MyHR: pick your dates, 14–18 December selected" loading="lazy"><figcaption class="mono">pick dates</figcaption></figure>
-        <figure><img src="../images/myhr/screen-sent.png" alt="MyHR: request sent to Marek" loading="lazy"><figcaption class="mono">sent</figcaption></figure>
+        <figure><img src="screen-home.png" alt="MyHR home screen: Good morning, Kasia; 26 days of time off left" loading="lazy"><figcaption class="mono">home</figcaption></figure>
+        <figure><img src="screen-dates.png" alt="MyHR: pick your dates, 14–18 December selected" loading="lazy"><figcaption class="mono">pick dates</figcaption></figure>
+        <figure><img src="screen-sent.png" alt="MyHR: request sent to Marek" loading="lazy"><figcaption class="mono">sent</figcaption></figure>
       </div>
 
       <h3 class="h4 gfx-label mono">rollout plan · 3 slides</h3>
-      <div class="slides">
-        <figure class="slide slide--wide"><img src="../images/myhr/slide-1.png" alt="Slide 1: six weeks from first teaser to new habit, timeline 23 Nov to 8 Jan" loading="lazy"></figure>
-        <figure class="slide"><img src="../images/myhr/slide-2.png" alt="Slide 2: every channel has one job" loading="lazy"></figure>
-        <figure class="slide"><img src="../images/myhr/slide-3.png" alt="Slide 3: how we'll know it worked: 80% active, minus 50% leave e-mails, 4.0 of 5 satisfaction" loading="lazy"></figure>
+      <div class="deck win" data-deck>
+        <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__title">MyHR_rollout_plan.pptx</span></div>
+        <div class="deck__track" tabindex="0" aria-label="Rollout plan slides, use arrow keys">
+          <figure class="deck__slide"><img src="slide-1.png" alt="Slide 1: six weeks from first teaser to new habit, timeline 23 Nov to 8 Jan"></figure>
+          <figure class="deck__slide"><img src="slide-2.png" alt="Slide 2: every channel has one job"></figure>
+          <figure class="deck__slide"><img src="slide-3.png" alt="Slide 3: how we'll know it worked: 80% active, minus 50% leave e-mails, 4.0 of 5 satisfaction"></figure>
+        </div>
+        <div class="deck__nav">
+          <button class="btn deck__btn" type="button" data-dir="-1" aria-label="Previous slide">←</button>
+          <span class="deck__count mono"><b>1</b> / 3</span>
+          <button class="btn deck__btn" type="button" data-dir="1" aria-label="Next slide">→</button>
+          <a class="btn deck__dl" href="MyHR_rollout_plan.pptx" download>.pptx ↓</a>
+        </div>
       </div>
 
       <h3 class="h4 gfx-label mono">brand kit</h3>
       <div class="kit">
-        <div class="kit__logo"><img src="../images/myhr/logo.png" alt="MyHR logo: half sun over a horizon in a black square" loading="lazy"></div>
+        <div class="kit__logo"><img src="logo.png" alt="MyHR logo: half sun over a horizon in a black square" loading="lazy"></div>
         <ul class="kit__colors" aria-label="Palette">
           <li style="--c:#1A1A1A"><span class="mono">Ink<br>#1A1A1A</span></li>
           <li style="--c:#F4F2EE"><span class="mono">Grey<br>#F4F2EE</span></li>
@@ -130,9 +144,9 @@
           <li style="--c:#6E6B66"><span class="mono">Muted<br>#6E6B66</span></li>
         </ul>
         <div class="kit__people">
-          <figure><img src="../images/myhr/kasia-worried.png" alt="Kasia, worried" loading="lazy"></figure>
-          <figure><img src="../images/myhr/kasia-happy.png" alt="Kasia, happy" loading="lazy"></figure>
-          <figure><img src="../images/myhr/agata.png" alt="Agata from HR Ops" loading="lazy"></figure>
+          <figure><img src="kasia-worried.png" alt="Kasia, worried" loading="lazy"></figure>
+          <figure><img src="kasia-happy.png" alt="Kasia, happy" loading="lazy"></figure>
+          <figure><img src="agata.png" alt="Agata from HR Ops" loading="lazy"></figure>
           <p class="mono">Kasia, Logistics: the user<br>Agata, HR Ops: the helper</p>
         </div>
       </div>
@@ -145,16 +159,16 @@
           <h2 class="h3" id="approach-title">Result &amp; approach</h2>
           <dl>
             <dt>Tone</dt>
-            <dd>Plain, warm, a bit cheeky: a colleague talking, not a corporation. People adopt tools when the message sounds like it came from someone who has also fought the leave inbox.</dd>
+            <dd><span class="desc desc--tech">Peer-to-peer, not top-down: plain, warm, slightly cheeky. Change messages land better from a relatable sender, so the story is told through a user persona and a named HR helper, not a policy announcement.</span><span class="desc desc--plain">Like a colleague talking, not a company. People try new tools when it sounds like someone who also hated the old way.</span></dd>
             <dt>Channels</dt>
-            <dd>Each channel does one job. Team leads are briefed first because they approve leave; the factory floor gets QR posters, a kiosk and champions in yellow lanyards.</dd>
+            <dd><span class="desc desc--tech">One objective per channel, no duplication. Approvers (team leads) are enabled before launch; deskless staff are reached offline via QR posters, a canteen kiosk and an office champion network.</span><span class="desc desc--plain">Each channel has one job. Managers hear first because they approve holidays. Factory workers get posters, a kiosk and a helper with a yellow lanyard.</span></dd>
             <dt>Success</dt>
-            <dd><b class="num">80%</b> active in 30 days · <b class="num">−50%</b> leave e-mails to HR · <b class="num">4.0/5</b> in the pulse survey. Teams under 50% at week 3 get a 10-minute stand-up demo.</dd>
+            <dd><span class="desc desc--tech"><b class="num">80%</b> MAU in 30 days · <b class="num">−50%</b> leave e-mails to HR · <b class="num">&lt;20</b> help questions/week by week 4 · <b class="num">4.0/5</b> pulse CSAT. Week-3 trigger: any team under 50% adoption gets a named list for its lead and a 10-min champion demo.</span><span class="desc desc--plain"><b class="num">8 of 10</b> people using the app within a month, half as many holiday e-mails to HR, and a good score in a short survey. If a team lags behind, someone comes over and shows them in 10 minutes.</span></dd>
           </dl>
         </div>
       </article>
 
-      <p class="back"><a class="btn" href="../index.html#projects">← back to all projects</a></p>
+      <p class="back"><a class="btn" href="index.html#projects">← back to all projects</a></p>
     </section>
   </main>
 

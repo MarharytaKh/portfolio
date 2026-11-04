@@ -204,7 +204,7 @@ document.querySelectorAll(".slot img").forEach(img => {
   if (img.complete && img.naturalWidth === 0) onFail();
 });
 
-const projects = document.querySelector(".projects");
+const projects = document.querySelector(".projects, .mode-root");
 const switchBtns = document.querySelectorAll(".switch__btn");
 
 function setMode(mode) {
@@ -258,4 +258,33 @@ document.querySelectorAll('.video[data-yt]').forEach(box => {
   const id = (box.dataset.yt || '').trim()
   if (!id) return
   box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="${box.dataset.title || 'Video'}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>`
+})
+
+
+document.querySelectorAll('[data-deck]').forEach(deck => {
+  const track = deck.querySelector('.deck__track')
+  const slides = [...deck.querySelectorAll('.deck__slide')]
+  const counter = deck.querySelector('.deck__count b')
+  const btns = deck.querySelectorAll('[data-dir]')
+  let i = 0
+  const sync = () => {
+    counter.textContent = i + 1
+    btns.forEach(b => b.disabled = b.dataset.dir === '-1' ? i === 0 : i === slides.length - 1)
+  }
+  const go = n => {
+    i = Math.max(0, Math.min(slides.length - 1, n))
+    track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' })
+    sync()
+  }
+  btns.forEach(b => b.addEventListener('click', () => go(i + Number(b.dataset.dir))))
+  track.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(i + 1) }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(i - 1) }
+  })
+  let t
+  track.addEventListener('scroll', () => {
+    clearTimeout(t)
+    t = setTimeout(() => { i = Math.round(track.scrollLeft / track.clientWidth); sync() }, 80)
+  })
+  sync()
 })
