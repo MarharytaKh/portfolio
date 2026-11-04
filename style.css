@@ -423,3 +423,6 @@ code{font:500 .86em var(--f-mono);background:var(--paper);border:1px solid var(-
 .project__media{display:flex;flex-direction:column}
 .project__media>.slot--strip:last-child{flex:1}
 .project__media>.slot:last-child{flex:1}
+
+.win--photo{width:100%;max-width:280px;justify-self:center}
+@media (max-width:860px){.win--photo{max-width:240px;justify-self:start}}
