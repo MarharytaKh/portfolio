@@ -181,6 +181,39 @@
           </div>
         </article>
 
+        <article class="win project project--featured project--flip" id="p-smog">
+          <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__title">smog_map/</span></div>
+          <div class="project__inner">
+            <div class="project__media">
+              <figure class="slot slot--wide">
+                <img src="smog-map.jpg" alt="Smog map: Leaflet map of Poland with air quality stations marked by index">
+                <figcaption class="slot__hint mono">smog-map.jpg</figcaption>
+              </figure>
+              <div class="project__thumbs">
+                <figure class="slot"><img src="smog-rank.jpg" style="object-position:50% 0" alt="Worst right now: ranking of Polish cities by PM2.5"><figcaption class="slot__hint mono">smog-rank.jpg</figcaption></figure>
+                <figure class="slot"><img class="fit-paper" src="smog-city.jpg" alt="City page: PM2.5, PM10 and NO2 with a 7-day history chart"><figcaption class="slot__hint mono">smog-city.jpg</figcaption></figure>
+              </div>
+              <figure class="slot slot--strip"><img class="fit-paper" src="smog-compare.jpg" alt="Compare page: Suwałki vs Kraków PM2.5 over a week"><figcaption class="slot__hint mono">smog-compare.jpg</figcaption></figure>
+            </div>
+            <div class="project__text">
+              <p class="meta mono"><span data-px="pin"></span>Nov 2026 · solo · full-stack</p>
+              <h3 class="h3">Smog Map</h3>
+              <p class="tag-row"><span class="tag">FastAPI</span><span class="tag">SQLAlchemy 2</span><span class="tag">SQLite</span><span class="tag">httpx</span><span class="tag">Next.js 15</span><span class="tag">TypeScript</span><span class="tag">Leaflet</span><span class="tag">Recharts</span><span class="tag">pytest</span></p>
+              <p class="desc desc--tech">Air quality map for Poland on the public GIOŚ API. An asyncio background task in the FastAPI lifespan syncs ~800 sensors hourly through an <code>httpx</code> client with a semaphore (3 concurrent) and retries, upserts readings into SQLite with <code>ON CONFLICT DO UPDATE</code> in 500-row batches and keeps a 30-day window. Station index uses GIOŚ thresholds (worst pollutant wins); nearest stations via haversine. 10 REST endpoints; SMTP alerts with a 6-hour cooldown and unsubscribe tokens. Next.js 15 App Router with ISR (revalidate 600 s), Leaflet loaded client-only via <code>dynamic()</code>. Frontend types generated from the OpenAPI schema with <code>openapi-typescript</code>, so a changed Python response model breaks the TS build. 16 pytest tests.</p>
+              <p class="desc desc--plain">A map of Poland that shows how clean the air is right now. Every hour it collects fresh numbers from the official government stations, shows which cities are the worst and the cleanest, draws a chart for the last week and lets you compare two cities. You can also leave your e-mail and get a message when the air near you gets bad.</p>
+              <ul class="stats">
+                <li><b>~800</b><span>sensors</span></li>
+                <li><b>1h</b><span>sync</span></li>
+                <li><b>30</b><span>days history</span></li>
+                <li><b>16</b><span>tests</span></li>
+              </ul>
+              <p class="links">
+                <a class="btn btn--primary" href="https://github.com/MarharytaKh/smog-map" target="_blank" rel="noopener">Code on GitHub</a>
+              </p>
+            </div>
+          </div>
+        </article>
+
         <article class="win project project--featured" id="p-cog">
           <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__title">cog_chain/</span></div>
           <div class="project__inner">
@@ -225,7 +258,7 @@
         </div>
 	       </article>
 
-        <article class="win project project--featured project--flip" id="p-gallery">
+        <article class="win project project--featured" id="p-gallery">
           <div class="win__bar"><span class="win__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="win__title">3d_model_gallery/</span></div>
           <div class="project__inner">
 
@@ -365,7 +398,7 @@
               <dt>Languages</dt>
               <dd><span>C</span><span>C++</span><span>C#</span><span>Python</span><span>JavaScript</span><span>SQL</span><span>PL/SQL</span><span>HTML</span><span>CSS</span></dd>
               <dt>Web &amp; data</dt>
-              <dd><span>Node.js</span><span>Express</span><span>REST API</span><span>Three.js</span><span>PostgreSQL</span><span>Oracle</span><span>Firebase</span></dd>
+              <dd><span>FastAPI</span><span>SQLAlchemy</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>REST API</span><span>Three.js</span><span>Leaflet</span><span>Recharts</span><span>PostgreSQL</span><span>SQLite</span><span>Oracle</span><span>Firebase</span></dd>
               <dt>Infra &amp; OS</dt>
               <dd><span>Docker Compose</span><span>Nginx</span><span>Linux</span><span>SSH</span><span>Fail2ban</span><span>iptables</span><span>Git / GitHub</span></dd>
               <dt>Games &amp; graphics</dt>
@@ -373,7 +406,7 @@
               <dd><span>Godot</span><span>Unity</span><span>Unreal Engine</span><span>SFML</span><span>Qt</span><span>ZBrush</span><span>Blender</span><span>Maya</span><span>Substance</span><span>Marmoset</span></dd>
 
               <dt>Docs &amp; process</dt>
-              <dd><span>UML</span><span>Doxygen</span><span>DocFX</span><span>Jira</span><span>Trello</span><span>code review</span><span>release planning</span></dd>
+              <dd><span>pytest</span><span>OpenAPI</span><span>UML</span><span>Doxygen</span><span>DocFX</span><span>Jira</span><span>Trello</span><span>code review</span><span>release planning</span></dd>
               <dt>Workplace &amp; content</dt>
               <dd><span>Teams</span><span>SharePoint</span><span>OneDrive</span><span>Outlook</span><span>Excel</span><span>Word</span><span>PowerPoint</span><span>Canva</span><span>video editing</span></dd>
           </dl>

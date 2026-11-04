@@ -418,3 +418,8 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px);
 .icon-tile [data-px] {width:52px;height:52px}
 .slot--portrait img[src$="hero.jpg"]{object-position:88% 50%}
 code{font:500 .86em var(--f-mono);background:var(--paper);border:1px solid var(--grid);padding:0 4px}
+.slot img.fit-paper{object-fit:contain;background:#faf8f3}
+.slot--strip{aspect-ratio:1600/606;border-top:var(--b)}
+.project__media{display:flex;flex-direction:column}
+.project__media>.slot--strip:last-child{flex:1}
+.project__media>.slot:last-child{flex:1}
